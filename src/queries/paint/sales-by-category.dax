@@ -1,0 +1,8 @@
+EVALUATE
+CALCULATETABLE(
+    SUMMARIZECOLUMNS(
+        Product[Category],
+        "Revenue", [Total Revenue]
+    )/*__FILTERS__*/
+)
+ORDER BY [Revenue] DESC

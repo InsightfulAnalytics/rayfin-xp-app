@@ -1,0 +1,14 @@
+EVALUATE
+CALCULATETABLE(
+    TOPN(
+        7,
+        SUMMARIZECOLUMNS(
+            Product[Product],
+            Product[Category],
+            "Units", [Total Units],
+            "Revenue", [Total Revenue]
+        ),
+        [Revenue], DESC
+    )/*__FILTERS__*/
+)
+ORDER BY [Revenue] DESC

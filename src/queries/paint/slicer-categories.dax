@@ -1,0 +1,2 @@
+EVALUATE VALUES(Product[Category])
+ORDER BY [Category]

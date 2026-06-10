@@ -1,0 +1,7 @@
+activeProfile: default
+profiles:
+  default:
+    semanticModels:
+      contosoSales:
+        workspaceId: 82d296e2-a0cb-4a4a-b29d-0debe6f44120
+        itemId: ddcc1f7e-334f-4b0c-9f85-09bcd2e04f58

@@ -1,0 +1,30 @@
+table Product
+
+	column Product
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Product
+
+	column Category
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Category
+
+	partition Product = m
+		mode: import
+		source =
+			let
+				Loaded = #table(
+                type table [Product = text, Category = text],
+                {
+                    {"Contoso Ultrabook 14", "Laptops"},
+                    {"Contoso Studio 16", "Laptops"},
+                    {"Contoso Phone X", "Phones"},
+                    {"Contoso Phone SE", "Phones"},
+                    {"Contoso Tab Air", "Tablets"},
+                    {"Contoso Buds Pro", "Audio"},
+                    {"Contoso Watch 2", "Other"}
+                }
+            )
+			in
+				Loaded

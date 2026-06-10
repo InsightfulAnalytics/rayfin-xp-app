@@ -1,0 +1,23 @@
+table Region
+
+	column Region
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Region
+
+	partition Region = m
+		mode: import
+		source =
+			let
+				Loaded = #table(
+                type table [Region = text],
+                {
+                    {"West"},
+                    {"North"},
+                    {"South"},
+                    {"East"},
+                    {"Central"}
+                }
+            )
+			in
+				Loaded

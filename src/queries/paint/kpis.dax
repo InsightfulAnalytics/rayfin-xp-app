@@ -1,0 +1,8 @@
+EVALUATE
+CALCULATETABLE(
+    ROW(
+        "totalRevenue", [Total Revenue],
+        "totalUnits", [Total Units],
+        "avgOrder", [Avg Order Value]
+    )/*__FILTERS__*/
+)

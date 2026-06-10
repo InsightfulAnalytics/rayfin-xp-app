@@ -1,0 +1,10 @@
+EVALUATE
+CALCULATETABLE(
+    SUMMARIZECOLUMNS(
+        'Date'[MonthNo],
+        'Date'[Month],
+        "Revenue", [Total Revenue],
+        "Units", [Total Units]
+    )/*__FILTERS__*/
+)
+ORDER BY 'Date'[MonthNo]

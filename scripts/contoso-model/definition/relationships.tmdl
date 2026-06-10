@@ -1,0 +1,11 @@
+relationship Sales_to_Date
+	fromColumn: Sales.MonthNo
+	toColumn: Date.MonthNo
+
+relationship Sales_to_Region
+	fromColumn: Sales.Region
+	toColumn: Region.Region
+
+relationship Sales_to_Product
+	fromColumn: Sales.Product
+	toColumn: Product.Product

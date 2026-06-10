@@ -1,0 +1,37 @@
+table Date
+
+	column Month
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Month
+		sortByColumn: MonthNo
+
+	column MonthNo
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: MonthNo
+
+	partition Date = m
+		mode: import
+		source =
+			let
+				Loaded = #table(
+                type table [Month = text, MonthNo = Int64.Type],
+                {
+                    {"Jan", 1},
+                    {"Feb", 2},
+                    {"Mar", 3},
+                    {"Apr", 4},
+                    {"May", 5},
+                    {"Jun", 6},
+                    {"Jul", 7},
+                    {"Aug", 8},
+                    {"Sep", 9},
+                    {"Oct", 10},
+                    {"Nov", 11},
+                    {"Dec", 12}
+                }
+            )
+			in
+				Loaded

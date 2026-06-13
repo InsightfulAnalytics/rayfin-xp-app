@@ -1,5 +1,5 @@
-id: rayfin-paint-app
-name: rayfin-paint-app
+id: Windows XP
+name: Windows XP
 version: 1.0.0
 services:
   auth:
@@ -9,6 +9,7 @@ services:
     allowedRedirectUris:
       - http://localhost:5173
       - https://frank-iris-95fb1036bb-swedencentral.webapp.fabricapps.net
+      - https://close-iris-bbb936bce6-australiaeast.webapp.fabricapps.net
   data:
     enabled: false
   storage:

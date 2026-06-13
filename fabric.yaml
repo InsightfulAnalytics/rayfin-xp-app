@@ -3,5 +3,5 @@ profiles:
   default:
     semanticModels:
       contosoSales:
-        workspaceId: 82d296e2-a0cb-4a4a-b29d-0debe6f44120
-        itemId: ddcc1f7e-334f-4b0c-9f85-09bcd2e04f58
+        workspaceId: 6c6afb09-761b-4ef5-9f5f-e8f91c228680
+        itemId: 6b006eeb-0172-4838-a5ce-b6083e938c72
